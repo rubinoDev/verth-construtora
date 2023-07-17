@@ -21,7 +21,3 @@ export const SloganContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export const Test = styled.div`
-  height: 200vh;
-`;

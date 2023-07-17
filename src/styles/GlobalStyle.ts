@@ -11,12 +11,12 @@ export default createGlobalStyle`
 
     -webkit-tap-highlight-color: transparent;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Dosis', 'Inter', Geneva, Verdana, sans-serif;
 }
 
 body {
     background:${Colors.bg_color};
-    color: "#132317";
+    color: "#FAFAFA";
     
 
     font-size: 16px;

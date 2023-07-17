@@ -33,19 +33,20 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/fav.ico" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Inter:wght@400;600;700&family=Noto+Serif:ital,wght@1,700&display=swap"
             rel="stylesheet"
           />
-          {/* <meta name="facebook-domain-verification" content="t4e2l3ydlnelkfhdtdf8bi46yicfrf" />
-					<Script type="text/javascript" src="/static/script.js"/>
-					<noscript>
-						<Image height="1" width="1" style={{display:'none'}}
-						src="https://www.facebook.com/tr?id=846339246369294&ev=PageView&noscript=1"
-						alt="a"/>
-					</noscript>	 */}
+
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body
           style={{

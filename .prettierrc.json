@@ -4,7 +4,7 @@
   "useTabs": false,
   "jsxSingleQuote": false,
   "semi": true,
-  "tabWidth": 2,
+  "tabWidth": 4,
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "arrowParens": "avoid",

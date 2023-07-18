@@ -1,3 +1,5 @@
+import Colors from '@/styles/Colors';
+import Button from '../Button';
 import { CTAButton, CTAContainer, CTAText } from './styles';
 
 interface ICallToAction {
@@ -9,7 +11,7 @@ const CallToAction = ({ text, buttonText }: ICallToAction) => {
   return (
     <CTAContainer>
       <CTAText>{text}</CTAText>
-      <CTAButton>{buttonText}</CTAButton>
+      <Button text={buttonText} textColor={Colors.black} backgroundColor={Colors.white} />
     </CTAContainer>
   );
 };

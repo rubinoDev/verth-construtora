@@ -10,20 +10,14 @@ export const CTAContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+
+  > button {
+    align-self: flex-end;
+  }
 `;
 
 export const CTAText = styled.p`
   color: ${Colors.white};
   font-size: 2rem;
   font-weight: 700;
-`;
-
-export const CTAButton = styled.button`
-  border-radius: 4px;
-  align-self: flex-end;
-  background-color: ${Colors.white};
-  color: ${Colors.black};
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  padding: 12px 24px;
 `;

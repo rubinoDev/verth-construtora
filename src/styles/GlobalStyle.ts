@@ -17,6 +17,7 @@ export default createGlobalStyle`
 body {
     background:${Colors.white};
     color: ${Colors.black};
+    
 
     font-size: 16px;
 }

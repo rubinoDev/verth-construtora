@@ -8,6 +8,7 @@ export const Container = styled.header`
   width: 100vw;
 
   background: ${Colors.white};
+  z-index: 999;
 
   > div {
     padding: 1rem;

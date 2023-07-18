@@ -10,7 +10,7 @@ export const SloganText = styled.p`
   font-size: 2.5rem;
   text-align: center;
   color: ${Colors.white};
-  z-index: 999;
+  z-index: 2;
 `;
 
 export const SloganContainer = styled.div`

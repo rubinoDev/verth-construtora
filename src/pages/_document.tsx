@@ -48,13 +48,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body
-          style={{
-            margin: '0 auto',
-            maxWidth: '600px !important',
-            position: 'relative'
-          }}
-        >
+        <body>
           <Main />
           <NextScript />
         </body>

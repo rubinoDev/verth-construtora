@@ -15,8 +15,8 @@ export default createGlobalStyle`
 }
 
 body {
-    background:${Colors.bg_color};
-    color: "#FAFAFA";
+    background:${Colors.white};
+    color: ${Colors.black};
     
 
     font-size: 16px;

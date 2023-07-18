@@ -1,5 +1,12 @@
+import Header from '@/components/Header';
+
 const Home = () => {
-  <h1>test</h1>;
+  return (
+    <>
+      <Header />
+      <div style={{ height: '500vh' }} />
+    </>
+  );
 };
 
 export default Home;

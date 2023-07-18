@@ -10,6 +10,7 @@ export const SloganText = styled.p`
   font-size: 2.5rem;
   text-align: center;
   color: ${Colors.white};
+  z-index: 999;
 `;
 
 export const SloganContainer = styled.div`
@@ -20,4 +21,11 @@ export const SloganContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const SloganOverlay = styled.div`
+  background-color: rgba(1, 1, 1, 0.15);
+  position: absolute;
+  height: 100%;
+  width: 100%;
 `;

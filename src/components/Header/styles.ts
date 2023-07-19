@@ -10,6 +10,7 @@ export const Container = styled.header`
 
   background: ${Colors.white};
   z-index: 999;
+  box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.1);
 
   > div {
     > div {

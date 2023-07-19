@@ -15,6 +15,7 @@ export default styled.section`
 
     .building {
       display: block;
+      width: 40%;
     }
   }
 `;

@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { ScreenSize } from '../utils';
 
+export const Container = styled.div`
+  @media (${ScreenSize.laptop}) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+`;
+
 export const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,9 +49,23 @@ export const AboutContainer = styled.div`
   }
 
   @media (${ScreenSize.laptop}) {
+    width: 50%;
+    display: flex;
+
     img {
       display: block;
       width: 11rem;
+    }
+
+    header {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    main {
+      font-size: 1.25rem;
+      align-items: flex-start;
     }
   }
 `;

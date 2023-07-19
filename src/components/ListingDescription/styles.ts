@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ScreenSize } from '../utils';
 
 export const Container = styled.ul`
   display: flex;
@@ -21,4 +22,14 @@ export const Paragraph = styled.p`
   color: white;
 
   z-index: 1;
+`;
+
+export const Content = styled.div`
+  @media (${ScreenSize.laptop}) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1024px;
+    gap: 5rem;
+  }
 `;

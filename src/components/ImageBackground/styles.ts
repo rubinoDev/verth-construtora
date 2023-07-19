@@ -17,7 +17,7 @@ export const Container = styled.section<IContainerProps>`
 `;
 
 export const Overlay = styled.div`
-  background-color: rgba(1, 1, 1, 0.5);
+  background-color: rgba(1, 1, 1, 0.6);
   position: absolute;
   height: 100%;
   width: 100%;

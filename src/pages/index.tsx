@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import ListingDescription from '@/components/ListingDescription';
 import Slogan from '@/components/Slogan';
 import About from '@/components/About';
+import Test from '@/components/Test';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <About />
 
       <ListingDescription />
+      <Test />
       <div style={{ height: '500vh' }} />
     </>
   );

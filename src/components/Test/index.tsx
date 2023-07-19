@@ -1,6 +1,6 @@
 const handleFetchAPI = async e => {
   e.preventDefault();
-  await fetch('/api/send', {
+  await fetch('/api/email', {
     method: 'POST',
     body: JSON.stringify({ firstName: 'Rubinaooo from Test' })
   });

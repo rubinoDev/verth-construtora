@@ -29,6 +29,10 @@ export const CTAContainer = styled.div`
       width: 100%;
       max-width: 1024px;
       flex-direction: row;
+
+      > button {
+        align-self: inherit;
+      }
     }
 
     .CTA__text-container {

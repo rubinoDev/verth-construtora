@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ScreenSize } from './utils';
 
 export default styled.section`
   display: flex;
@@ -7,5 +8,13 @@ export default styled.section`
 
   .building {
     display: none;
+  }
+
+  @media (${ScreenSize.laptop}) {
+    flex-direction: row;
+
+    .building {
+      display: block;
+    }
   }
 `;

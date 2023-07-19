@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ScreenSize } from '../utils';
 
 export interface IHamburguerProps {
   isOpened: boolean;
@@ -30,5 +31,9 @@ export const Container = styled.div<IHamburguerProps>`
   }
   .burger3 {
     transform: ${({ isOpened }) => (isOpened ? 'rotate(-45deg)' : 'rotate(0)')};
+  }
+
+  @media (${ScreenSize.laptop}) {
+    display: none;
   }
 `;

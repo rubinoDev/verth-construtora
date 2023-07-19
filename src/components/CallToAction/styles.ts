@@ -1,18 +1,39 @@
 import Colors from '@/styles/Colors';
 import styled from 'styled-components';
+import { ScreenSize } from '../utils';
 
 export const CTAContainer = styled.div`
   width: 100%;
   padding: 1rem;
   background-color: ${Colors.blue};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
 
-  > button {
-    align-self: flex-end;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    > button {
+      align-self: flex-end;
+    }
+  }
+
+  @media (${ScreenSize.laptop}) {
+    > div {
+      margin: 0 auto;
+      display: flex;
+      padding-block: 2rem;
+      padding-inline: 0rem;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1024px;
+      flex-direction: row;
+    }
+
+    .CTA__text-container {
+      width: 40rem;
+    }
   }
 `;
 

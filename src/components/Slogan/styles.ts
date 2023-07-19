@@ -1,5 +1,6 @@
 import Colors from '@/styles/Colors';
 import styled from 'styled-components';
+import { ScreenSize } from '../utils';
 
 export const Bold = styled.span`
   font-weight: 700;
@@ -11,6 +12,12 @@ export const SloganText = styled.p`
   text-align: center;
   color: ${Colors.white};
   z-index: 2;
+  text-transform: uppercase;
+
+  @media (${ScreenSize.laptop}) {
+    font-size: 4rem;
+    line-height: 5.875rem;
+  }
 `;
 
 export const SloganContainer = styled.div`
@@ -24,7 +31,7 @@ export const SloganContainer = styled.div`
 `;
 
 export const SloganOverlay = styled.div`
-  background-color: rgba(1, 1, 1, 0.15);
+  background-color: rgba(1, 1, 1, 0.5);
   position: absolute;
   height: 100%;
   width: 100%;

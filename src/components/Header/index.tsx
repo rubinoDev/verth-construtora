@@ -16,19 +16,21 @@ const Header = () => {
   return (
     <Container>
       <div>
-        <img src="/logo.png" alt="Logo da Construtora Verth" />
-        <button type="button" onClick={() => setIsOpened(curr => !curr)}>
-          <Hamburguer isOpened={isOpened} />
-        </button>
-      </div>
+        <div>
+          <img src="/logo.png" alt="Logo da Construtora Verth" />
+          <button type="button" onClick={() => setIsOpened(curr => !curr)}>
+            <Hamburguer isOpened={isOpened} />
+          </button>
+        </div>
 
-      <NavContainer isOpened={isOpened}>
-        <ul>
-          {navData.map((item, index) => (
-            <NavItem key={index}>{item.text}</NavItem>
-          ))}
-        </ul>
-      </NavContainer>
+        <NavContainer isOpened={isOpened}>
+          <ul>
+            {navData.map((item, index) => (
+              <NavItem key={index}>{item.text}</NavItem>
+            ))}
+          </ul>
+        </NavContainer>
+      </div>
     </Container>
   );
 };

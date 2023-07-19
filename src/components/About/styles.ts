@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ScreenSize } from '../utils';
 
 export const AboutContainer = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     line-height: 1.2em;
     word-spacing: 2px;
@@ -33,6 +35,13 @@ export const AboutContainer = styled.div`
 
     button {
       margin-top: 1rem;
+    }
+  }
+
+  @media (${ScreenSize.laptop}) {
+    img {
+      display: block;
+      width: 11rem;
     }
   }
 `;

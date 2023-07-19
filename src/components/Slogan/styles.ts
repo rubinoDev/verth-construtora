@@ -19,20 +19,3 @@ export const SloganText = styled.p`
     line-height: 5.875rem;
   }
 `;
-
-export const SloganContainer = styled.div`
-  background: url('/house-bg.png') no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const SloganOverlay = styled.div`
-  background-color: rgba(1, 1, 1, 0.5);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-`;

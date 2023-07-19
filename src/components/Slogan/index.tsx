@@ -1,15 +1,15 @@
-import { Bold, SloganContainer, SloganOverlay, SloganText } from './styles';
+import ImageBackground from '../ImageBackground';
+import { Bold, SloganText } from './styles';
 
 const Slogan = () => {
   return (
-    <SloganContainer>
-      <SloganOverlay />
+    <ImageBackground imageSrc="/house-bg.png">
       <SloganText>
         <Bold>Qualidade</Bold> é o
         <br /> nosso <br />
         <Bold>compromisso</Bold>
       </SloganText>
-    </SloganContainer>
+    </ImageBackground>
   );
 };
 

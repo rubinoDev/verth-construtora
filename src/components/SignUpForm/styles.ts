@@ -11,13 +11,14 @@ export const Container = styled.div<ContainerProps>`
   padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
-  border: 1px solid #cfcccc;
 
   > p {
     display: flex;
-    align-self: center;
-    padding: 1rem;
+
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 `;
 

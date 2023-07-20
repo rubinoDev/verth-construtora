@@ -11,6 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { database } from '../config/firebase';
 
 import * as zod from 'zod';
+import Carousel from '@/components/Carousel';
 
 const signUpValidationSchema = zod.object({
   name: zod.string().min(1, 'Favor informe seu nome'),
@@ -64,6 +65,7 @@ const Home = () => {
       <About />
 
       <ListingDescription />
+      <Carousel />
       <form onSubmit={handleSubmit(handleRegister)}>
         <FormProvider {...signUpForm}>
           <SignUpForm errors={errors} />

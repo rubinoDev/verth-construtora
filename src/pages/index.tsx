@@ -17,7 +17,6 @@ import Carousel from '@/components/Carousel';
 import Chat from '@/components/Chat';
 import { useState } from 'react';
 
-
 const signUpValidationSchema = zod.object({
   name: zod.string().min(1, 'Favor informe seu nome'),
   email: zod.string().email().min(1, 'Favor informe seu email'),
@@ -52,16 +51,13 @@ const Home = () => {
       // await addDoc(dbInstance, data);
       const { name, email, phone } = data;
 
-
       await fetch('/api/email', {
         method: 'POST',
         body: JSON.stringify({ name, email, phone })
       });
       alert('success');
 
-
       setSuccess(true);
-
     } catch (e) {
       console.log('erro', e);
     }

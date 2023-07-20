@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ScreenSize } from './utils';
-import Colors from '@/styles/Colors';
 
 export default styled.section`
   display: flex;

@@ -1,6 +1,6 @@
 import CallToAction from '@/components/CallToAction';
 import Header from '@/components/Header';
-import { addDoc, collection } from 'firebase/firestore';
+//import { addDoc, collection } from 'firebase/firestore';
 import ListingDescription from '@/components/ListingDescription';
 import Slogan from '@/components/Slogan';
 import About from '@/components/About';
@@ -8,7 +8,7 @@ import SignUpForm from '@/components/SignUpForm';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { database } from '../config/firebase';
+//import { database } from '../config/firebase';
 
 import * as zod from 'zod';
 import Chat from '@/components/Chat';
@@ -24,7 +24,7 @@ type SignUpFormData = zod.infer<typeof signUpValidationSchema>;
 
 const Home = () => {
   const [success, setSuccess] = useState(false);
-  const dbInstance = collection(database, 'leads');
+  //const dbInstance = collection(database, 'leads');
 
   const signUpForm = useForm<SignUpFormData>({
     resolver: zodResolver(signUpValidationSchema),
@@ -37,7 +37,6 @@ const Home = () => {
 
   const {
     handleSubmit,
-    watch,
     reset,
     formState: { errors }
   } = signUpForm;
@@ -49,6 +48,7 @@ const Home = () => {
       // await addDoc(dbInstance, data);
 
       // TODO: RESEND
+      console.log(data);
       setSuccess(true);
     } catch (e) {
       console.log('erro', e);

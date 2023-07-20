@@ -6,7 +6,7 @@ import CustomInput from '../CustomInput';
 
 import { FaUser, FaPhone } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
-import { Container, Divider } from './styles';
+import { Container } from './styles';
 import Section from '../Section';
 import Button from '../Button';
 

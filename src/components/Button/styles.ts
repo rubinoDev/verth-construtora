@@ -3,7 +3,7 @@ import { IButton } from '.';
 
 export const ButtonElement = styled.button<IButton>`
   border-radius: 4px;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background: ${({ backgroundColor }) => backgroundColor};
   color: ${({ textColor }) => textColor};
   text-transform: uppercase;
   font-size: 1.25rem;

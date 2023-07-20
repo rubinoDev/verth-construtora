@@ -44,8 +44,12 @@ const Home = () => {
       // Aqui chama o Banco de dados
       // Não descomenta pra testar o resend
       // await addDoc(dbInstance, data);
+      const { name, email, phone } = data;
 
-      // TODO: RESEND
+      await fetch('/api/email', {
+        method: 'POST',
+        body: JSON.stringify({ name, email, phone })
+      });
       alert('success');
     } catch (e) {
       console.log('erro', e);

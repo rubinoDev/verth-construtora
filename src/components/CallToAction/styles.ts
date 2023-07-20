@@ -1,8 +1,9 @@
 import Colors from '@/styles/Colors';
 import styled from 'styled-components';
+import { ICallToAction } from '.';
 import { ScreenSize } from '../utils';
 
-export const CTAContainer = styled.div`
+export const CTAContainer = styled.div<ICallToAction>`
   width: 100%;
   padding: 1rem;
   background-color: ${Colors.blue};
@@ -37,6 +38,13 @@ export const CTAContainer = styled.div`
 
     .CTA__text-container {
       width: 40rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+
+      > p {
+        display: inline-block;
+      }
     }
   }
 `;

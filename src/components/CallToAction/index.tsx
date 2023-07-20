@@ -2,19 +2,20 @@ import Colors from '@/styles/Colors';
 import Button from '../Button';
 import { CTAContainer, CTAText } from './styles';
 
-interface ICallToAction {
-  text: string;
-  buttonText: string;
+export interface ICallToAction {
+  text?: string;
+  buttonText?: string;
+  hasButton?: boolean;
 }
 
-const CallToAction = ({ text, buttonText }: ICallToAction) => {
+const CallToAction = ({ text, buttonText, hasButton = true }: ICallToAction) => {
   return (
-    <CTAContainer>
+    <CTAContainer hasButton={hasButton}>
       <div>
         <div className="CTA__text-container">
           <CTAText>{text}</CTAText>
         </div>
-        <Button text={buttonText} textColor={Colors.black} backgroundColor={Colors.white} />
+        {hasButton && <Button text={buttonText} textColor={Colors.black} backgroundColor={Colors.white} />}
       </div>
     </CTAContainer>
   );

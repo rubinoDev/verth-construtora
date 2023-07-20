@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, HeaderWrapper, NavContainer, NavItem } from './styles';
 import Hamburguer from '../Hamburguer';
-import UperHeader from '../UperHeader';
+import UperHeader from '../UpperHeader';
 
 const navData = [
   { text: 'INÍCIO' },

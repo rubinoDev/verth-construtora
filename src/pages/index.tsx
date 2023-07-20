@@ -16,7 +16,8 @@ import Carousel from '@/components/Carousel';
 
 import Chat from '@/components/Chat';
 import { useState } from 'react';
-
+import UperHeader from '@/components/UpperHeader';
+import Footer from '@/components/Footer';
 
 const signUpValidationSchema = zod.object({
   name: zod.string().min(1, 'Favor informe seu nome'),
@@ -52,16 +53,12 @@ const Home = () => {
       // await addDoc(dbInstance, data);
       const { name, email, phone } = data;
 
-
       await fetch('/api/email', {
         method: 'POST',
         body: JSON.stringify({ name, email, phone })
       });
-      alert('success');
-
 
       setSuccess(true);
-
     } catch (e) {
       console.log('erro', e);
     }
@@ -80,11 +77,13 @@ const Home = () => {
 
       <ListingDescription />
       <Carousel />
+      <CallToAction text="CANSADO DE CONSTRUTORA AMADORA?" buttonText="Entre em contato" hasButton={false} />
       <form onSubmit={handleSubmit(handleRegister)}>
         <FormProvider {...signUpForm}>
           <SignUpForm errors={errors} success={success} />
         </FormProvider>
       </form>
+      <Footer />
 
       <Chat></Chat>
     </>

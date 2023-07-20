@@ -11,6 +11,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { database } from '../config/firebase';
 
 import * as zod from 'zod';
+import Chat from '@/components/Chat';
+import { useState } from 'react';
 
 const signUpValidationSchema = zod.object({
   name: zod.string().min(1, 'Favor informe seu nome'),
@@ -21,6 +23,7 @@ const signUpValidationSchema = zod.object({
 type SignUpFormData = zod.infer<typeof signUpValidationSchema>;
 
 const Home = () => {
+  const [success, setSuccess] = useState(false);
   const dbInstance = collection(database, 'leads');
 
   const signUpForm = useForm<SignUpFormData>({
@@ -46,7 +49,7 @@ const Home = () => {
       // await addDoc(dbInstance, data);
 
       // TODO: RESEND
-      alert('success');
+      setSuccess(true);
     } catch (e) {
       console.log('erro', e);
     }
@@ -66,10 +69,11 @@ const Home = () => {
       <ListingDescription />
       <form onSubmit={handleSubmit(handleRegister)}>
         <FormProvider {...signUpForm}>
-          <SignUpForm errors={errors} />
+          <SignUpForm errors={errors} success={success} />
         </FormProvider>
       </form>
-      <div style={{ height: '500vh' }} />
+
+      <Chat></Chat>
     </>
   );
 };

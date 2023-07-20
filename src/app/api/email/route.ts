@@ -6,13 +6,13 @@ const resend = new Resend('re_K3bcK91A_Pr7XctPgUyb8GrWvBBkhSnmJ');
 
 export async function POST(req: Request) {
   try {
-    const { firstName } = await req.json();
+    const { name, email, phone } = await req.json();
 
     const data = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Test verth <onboarding@resend.dev>',
       to: ['rubinodev@gmail.com'],
-      subject: 'Hello World',
-      react: EmailTemplate({ firstName })
+      subject: 'Nova inscrição',
+      react: EmailTemplate({ name, email, phone })
     });
 
     return NextResponse.json(data, { status: 200 });

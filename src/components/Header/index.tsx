@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Container, NavContainer, NavItem } from './styles';
+import { Container, HeaderWrapper, NavContainer, NavItem } from './styles';
 import Hamburguer from '../Hamburguer';
+import UperHeader from '../UperHeader';
 
 const navData = [
   { text: 'INÍCIO' },
@@ -14,24 +15,27 @@ const Header = () => {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <Container>
-      <div>
+    <HeaderWrapper>
+      <UperHeader />
+      <Container>
         <div>
-          <img src="/logo.png" alt="Logo da Construtora Verth" />
-          <button type="button" onClick={() => setIsOpened(curr => !curr)}>
-            <Hamburguer isOpened={isOpened} />
-          </button>
-        </div>
+          <div>
+            <img src="/logo.png" alt="Logo da Construtora Verth" />
+            <button type="button" onClick={() => setIsOpened(curr => !curr)}>
+              <Hamburguer isOpened={isOpened} />
+            </button>
+          </div>
 
-        <NavContainer isOpened={isOpened}>
-          <ul>
-            {navData.map((item, index) => (
-              <NavItem key={index}>{item.text}</NavItem>
-            ))}
-          </ul>
-        </NavContainer>
-      </div>
-    </Container>
+          <NavContainer isOpened={isOpened}>
+            <ul>
+              {navData.map((item, index) => (
+                <NavItem key={index}>{item.text}</NavItem>
+              ))}
+            </ul>
+          </NavContainer>
+        </div>
+      </Container>
+    </HeaderWrapper>
   );
 };
 

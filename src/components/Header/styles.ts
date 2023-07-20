@@ -3,6 +3,14 @@ import styled from 'styled-components';
 import { IHamburguerProps } from '../Hamburguer/styles';
 import { ScreenSize } from '../utils';
 
+export const HeaderWrapper = styled.span`
+  position: fixed;
+
+  width: 100vw;
+
+  z-index: 999;
+`;
+
 export const Container = styled.header`
   position: fixed;
 

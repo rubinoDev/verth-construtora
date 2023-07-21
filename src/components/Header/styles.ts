@@ -12,8 +12,6 @@ export const HeaderWrapper = styled.span`
 `;
 
 export const Container = styled.header`
-  position: fixed;
-
   width: 100vw;
 
   background: ${Colors.white};
@@ -28,6 +26,7 @@ export const Container = styled.header`
       align-items: center;
 
       > img {
+        cursor: pointer;
         width: 45%;
       }
 
@@ -40,7 +39,6 @@ export const Container = styled.header`
 
   @media (${ScreenSize.laptop}) {
     width: 100%;
-    position: fixed;
     display: flex;
     justify-content: center;
 
@@ -59,7 +57,6 @@ export const Container = styled.header`
 `;
 
 export const NavContainer = styled.nav<IHamburguerProps>`
-  position: absolute;
   width: 100vw;
   background: ${Colors.white};
   transform-origin: top;

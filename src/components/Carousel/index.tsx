@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 
 const Carousel = () => {
   return (
-    <Section>
+    <Section id="carousel">
       <Content>
         <div>
           <p>Qualidade garantida</p>
@@ -27,13 +27,13 @@ const Carousel = () => {
           modules={[Navigation, Pagination, Autoplay]}
           autoplay={{
             delay: 2500,
-            disableOnInteraction: false
+            disableOnInteraction: true
           }}
           className="mySwiper"
         >
           {[...Array(9)].map((_, index) => (
             <SwiperSlide key={index}>
-              <img src="/logo.png" />
+              <img src="/logo.png" alt="qualquer alt" />
             </SwiperSlide>
           ))}
         </Swiper>

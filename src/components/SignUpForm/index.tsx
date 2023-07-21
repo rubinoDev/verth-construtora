@@ -29,7 +29,7 @@ const SignUpForm = ({
   const { register } = useFormContext();
 
   return (
-    <Section>
+    <Section id="form">
       <Container>
         <FormContainer
           backgroundColor={backgroundColor}

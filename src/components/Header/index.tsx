@@ -26,6 +26,8 @@ const Header = () => {
       top: y,
       behavior: 'smooth'
     });
+
+    setIsOpened(false);
   }, []);
 
   return (
@@ -35,7 +37,7 @@ const Header = () => {
         <div>
           <div>
             <img src="/logo.png" alt="Logo da Construtora Verth" onClick={scrollToSection} title="header" />
-            <button type="button" onClick={() => setIsOpened(curr => !curr)}>
+            <button type="button" onClick={() => setIsOpened(curr => !curr)} className="desktop-only">
               <Hamburguer isOpened={isOpened} />
             </button>
           </div>

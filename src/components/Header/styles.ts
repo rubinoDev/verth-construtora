@@ -59,6 +59,7 @@ export const Container = styled.header`
 export const NavContainer = styled.nav<IHamburguerProps>`
   width: 100vw;
   background: ${Colors.white};
+  position: absolute;
   transform-origin: top;
   transform: ${({ isOpened }) => (isOpened ? 'scaleY(1)' : 'scaleY(0)')};
   transition: all 0.2s linear;

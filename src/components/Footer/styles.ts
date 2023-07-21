@@ -7,35 +7,81 @@ export const Container = styled.span`
   padding: 1rem 0.5rem;
   background: ${Colors.blue};
   display: flex;
+  align-items: flex-end;
   > span {
     width: 100%;
+    flex-direction: column;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
 
-    justify-content: space-between;
-    padding: 0.5rem;
-
-    > div {
+    .logo {
       display: flex;
+      width: 20%;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
 
-      gap: 0.5rem;
-
-      align-items: center;
-      font-weight: 700;
+    .cnpj {
+      font-size: 0.7rem;
       color: ${Colors.white};
     }
 
-    > div.only-desktop {
-      display: none;
+    .icons {
+      display: flex;
+      gap: 0.2rem;
+    }
+
+    .copyright {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      color: ${Colors.white};
     }
   }
 
+  .only-desktop {
+    display: none;
+  }
+
   @media (${ScreenSize.laptop}) {
+    position: relative;
+    .only-desktop {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: ${Colors.white};
+      font-size: 0.8rem;
+
+      svg {
+        font-size: 1rem;
+      }
+    }
     > span {
+      padding: 1rem 1rem 2rem;
+      flex-direction: row;
       justify-content: space-around;
       max-width: 1024px;
       margin: 0 auto;
-      > div.only-desktop {
-        display: flex;
+
+      .icons {
+        font-size: 1.5rem;
+
+        a:nth-child(3) {
+          display: none;
+        }
+
+        a:nth-child(4) {
+          display: none;
+        }
+      }
+
+      .copyright {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 0.9rem;
       }
     }
   }

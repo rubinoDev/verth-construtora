@@ -14,7 +14,7 @@ const itemsArray = [
 
 const ListingDescription = () => {
   return (
-    <ImageBackground imageSrc="casa-piscina.png">
+    <ImageBackground imageSrc="casa-piscina.png" id="listing-description">
       <Content>
         <Container>
           {itemsArray.map((item, index) => (

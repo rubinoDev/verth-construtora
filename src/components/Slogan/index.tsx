@@ -3,7 +3,7 @@ import { Bold, SloganText } from './styles';
 
 const Slogan = () => {
   return (
-    <ImageBackground imageSrc="/house-bg.png">
+    <ImageBackground imageSrc="/house-bg.png" id="header">
       <SloganText>
         <Bold>Qualidade</Bold> é o
         <br /> nosso <br />

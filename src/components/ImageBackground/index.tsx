@@ -6,11 +6,12 @@ interface IImageBackgroundProps {
   children: ReactNode;
   imageSrc: string;
   hasOverlay?: boolean;
+  id?: string;
 }
 
-const ImageBackground = ({ children, imageSrc, hasOverlay = true }: IImageBackgroundProps) => {
+const ImageBackground = ({ children, imageSrc, hasOverlay = true, id = 'block-id' }: IImageBackgroundProps) => {
   return (
-    <Container imageSrc={imageSrc}>
+    <Container imageSrc={imageSrc} id={id}>
       {hasOverlay && <Overlay />}
       {children}
     </Container>

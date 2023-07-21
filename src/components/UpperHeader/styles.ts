@@ -28,8 +28,23 @@ export const Container = styled.span`
         color: ${Colors.white};
       }
 
-      > div.only-desktop {
+      .region {
         display: flex;
+        svg {
+          margin-top: 0.1rem;
+        }
+      }
+
+      .email {
+        svg {
+          margin-top: 0.2rem;
+        }
+      }
+
+      .phone {
+        svg {
+          margin-top: 0.1rem;
+        }
       }
     }
   }

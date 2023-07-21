@@ -1,23 +1,23 @@
+import { useState } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
+
 import CallToAction from '@/components/CallToAction';
 import Header from '@/components/Header';
-import { addDoc, collection } from 'firebase/firestore';
 import ListingDescription from '@/components/ListingDescription';
 import Slogan from '@/components/Slogan';
 import About from '@/components/About';
 import SignUpForm from '@/components/SignUpForm';
-import { FormProvider, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-
-import { database } from '../config/firebase';
-
-import * as zod from 'zod';
-
-import Carousel from '@/components/Carousel';
-
 import Chat from '@/components/Chat';
-import { useState } from 'react';
+import Carousel from '@/components/Carousel';
 import Footer from '@/components/Footer';
 import { scrollToForm } from '@/utils/scrollToForm';
+
+import { addDoc, collection } from 'firebase/firestore';
+import { database } from '../config/firebase';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as zod from 'zod';
+
 import { StyleSheetManager } from 'styled-components';
 import isPropValid from '@emotion/is-prop-valid';
 

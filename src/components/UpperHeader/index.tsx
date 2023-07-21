@@ -6,7 +6,7 @@ const UpperHeader = () => {
   return (
     <Container>
       <span>
-        <div className="only-desktop">
+        <div className="region">
           <TbGps />
           <p>Campinas e Região</p>
         </div>

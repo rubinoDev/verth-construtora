@@ -49,15 +49,22 @@ export const Container = styled.span`
 
   @media (${ScreenSize.laptop}) {
     position: relative;
+
+    .cnpj {
+      p {
+        font-size: 1rem;
+      }
+    }
+
     .only-desktop {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       color: ${Colors.white};
-      font-size: 0.8rem;
+      font-size: 1rem;
 
       svg {
-        font-size: 1rem;
+        margin-top: 0.2rem;
       }
     }
     > span {

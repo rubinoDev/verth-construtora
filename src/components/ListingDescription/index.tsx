@@ -51,7 +51,7 @@ const ListingDescription = () => {
   }, []);
 
   return (
-    <ImageBackground imageSrc="casa-piscina.png">
+    <ImageBackground imageSrc="casa-piscina.png" id="listing-description">
       <Content ref={contentRef}>
         <Container ref={itemsContainerRef}>
           {itemsArray.map((item, index) => (

@@ -1,6 +1,6 @@
 import CallToAction from '@/components/CallToAction';
 import Header from '@/components/Header';
-//import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import ListingDescription from '@/components/ListingDescription';
 import Slogan from '@/components/Slogan';
 import About from '@/components/About';
@@ -8,7 +8,7 @@ import SignUpForm from '@/components/SignUpForm';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-//import { database } from '../config/firebase';
+import { database } from '../config/firebase';
 
 import * as zod from 'zod';
 
@@ -16,6 +16,8 @@ import Carousel from '@/components/Carousel';
 
 import Chat from '@/components/Chat';
 import { useState } from 'react';
+import Footer from '@/components/Footer';
+import { scrollToForm } from '@/utils/scrollToForm';
 
 const signUpValidationSchema = zod.object({
   name: zod.string().min(1, 'Favor informe seu nome'),
@@ -27,7 +29,7 @@ type SignUpFormData = zod.infer<typeof signUpValidationSchema>;
 
 const Home = () => {
   const [success, setSuccess] = useState(false);
-  //const dbInstance = collection(database, 'leads');
+  const dbInstance = collection(database, 'leads');
 
   const signUpForm = useForm<SignUpFormData>({
     resolver: zodResolver(signUpValidationSchema),
@@ -46,16 +48,13 @@ const Home = () => {
 
   async function handleRegister(data: SignUpFormData) {
     try {
-      // Aqui chama o Banco de dados
-      // Não descomenta pra testar o resend
-      // await addDoc(dbInstance, data);
+      await addDoc(dbInstance, data);
       const { name, email, phone } = data;
 
       await fetch('/api/email', {
         method: 'POST',
         body: JSON.stringify({ name, email, phone })
       });
-      alert('success');
 
       setSuccess(true);
     } catch (e) {
@@ -71,16 +70,19 @@ const Home = () => {
       <CallToAction
         text="ESTÁ BUSCANDO UM SERVIÇO DE QUALIDADE PARA REALIZAR SEUS SONHOS?"
         buttonText="Entre em contato"
+        handleButtonClick={scrollToForm}
       />
       <About />
 
       <ListingDescription />
       <Carousel />
+      <CallToAction text="CANSADO DE CONSTRUTORA AMADORA?" buttonText="Entre em contato" hasButton={false} />
       <form onSubmit={handleSubmit(handleRegister)}>
         <FormProvider {...signUpForm}>
           <SignUpForm errors={errors} success={success} />
         </FormProvider>
       </form>
+      <Footer />
 
       <Chat></Chat>
     </>

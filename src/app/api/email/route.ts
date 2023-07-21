@@ -1,8 +1,9 @@
 import { EmailTemplate } from '@/components/EmailTemplate';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { CreateEmailOptions } from 'resend/build/src/emails/interfaces';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend('re_8CopfTvC_386HEGgBBjhpDch9gxM1MY66');
 
 export async function POST(req: Request) {
   try {
@@ -10,13 +11,13 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: 'Test verth <onboarding@resend.dev>',
-      to: ['rubinodev@gmail.com'],
+      to: ['fabioassoni06@gmail.com'],
       subject: 'Nova inscrição',
       react: EmailTemplate({ name, email, phone })
-    });
+    } as CreateEmailOptions);
 
     return NextResponse.json(data, { status: 200 });
   } catch (error) {
-    return NextResponse.json({}, { status: 500 });
+    return NextResponse.json({ error }, { status: 500 });
   }
 }

@@ -2,10 +2,11 @@ import Colors from '@/styles/Colors';
 import Button from '../Button';
 import Section from '../Section';
 import { AboutContainer, Container } from './styles';
+import { scrollToForm } from '@/utils/scrollToForm';
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <AboutContainer>
           <header>
@@ -25,7 +26,7 @@ const About = () => {
               Modi, consequatur fugit. Aliquam!
             </p>
 
-            <Button text="Saiba mais" backgroundColor={Colors.blue} textColor={Colors.white} />
+            <Button text="Saiba mais" backgroundColor={Colors.blue} textColor={Colors.white} onClick={scrollToForm} />
           </main>
         </AboutContainer>
 

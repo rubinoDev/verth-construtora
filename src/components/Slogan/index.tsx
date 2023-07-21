@@ -21,7 +21,7 @@ const Slogan = () => {
       [];
   });
   return (
-    <ImageBackground imageSrc="/house-bg.png">
+    <ImageBackground imageSrc="/house-bg.png" id="header">
       <SloganText ref={textRef}>
         <Bold>Qualidade</Bold> é o
         <br /> nosso <br />

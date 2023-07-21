@@ -6,9 +6,10 @@ import CustomInput from '../CustomInput';
 
 import { FaUser, FaPhone } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
-import { Container } from './styles';
+import { Container, FormContainer } from './styles';
 import Section from '../Section';
 import Button from '../Button';
+import Success from '../Success';
 
 interface ISignUpForm {
   errors: any;
@@ -28,35 +29,42 @@ const SignUpForm = ({
   const { register } = useFormContext();
 
   return (
-    <Section>
-      <Container backgroundColor={backgroundColor} borderColor={borderColor} boxShadowColor={boxShadowColor}>
-        {!success && (
-          <>
-            <p>Entre em contato</p>
-            <CustomInput
-              icon={<FaUser />}
-              error={errors.name?.message}
-              placeholder="DIGITE SEU NOME"
-              register={register('name', { required: true })}
-            />
-            <CustomInput
-              icon={<HiMail />}
-              error={errors.email?.message}
-              placeholder="INFORME SEU MELHOR E-MAIL"
-              register={register('email', { required: true })}
-            />
-            <CustomInput
-              icon={<FaPhone />}
-              error={errors.phone?.message}
-              placeholder="SEU WHATSAPP COM DDD"
-              register={register('phone', { required: true })}
-              type="text"
-            />
+    <Section id="form">
+      <Container>
+        <FormContainer
+          backgroundColor={backgroundColor}
+          borderColor={borderColor}
+          boxShadowColor={boxShadowColor}
+          success={success}
+        >
+          {!success && (
+            <>
+              <p>Entre em contato</p>
+              <CustomInput
+                icon={<FaUser />}
+                error={errors.name?.message}
+                placeholder="DIGITE SEU NOME"
+                register={register('name', { required: true })}
+              />
+              <CustomInput
+                icon={<HiMail />}
+                error={errors.email?.message}
+                placeholder="INFORME SEU MELHOR E-MAIL"
+                register={register('email', { required: true })}
+              />
+              <CustomInput
+                icon={<FaPhone />}
+                error={errors.phone?.message}
+                placeholder="SEU WHATSAPP COM DDD"
+                register={register('phone', { required: true })}
+                type="text"
+              />
 
-            <Button text="ENVIAR" backgroundColor={Colors.green} textColor={Colors.black} />
-          </>
-        )}
-        {success && <img src="/p.png"></img>}
+              <Button text="ENVIAR" backgroundColor={Colors.green} textColor={Colors.black} />
+            </>
+          )}
+          {success && <Success />}
+        </FormContainer>
       </Container>
     </Section>
   );

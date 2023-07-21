@@ -18,6 +18,8 @@ import Chat from '@/components/Chat';
 import { useState } from 'react';
 import Footer from '@/components/Footer';
 import { scrollToForm } from '@/utils/scrollToForm';
+import { StyleSheetManager } from 'styled-components';
+import isPropValid from '@emotion/is-prop-valid';
 
 const signUpValidationSchema = zod.object({
   name: zod.string().min(1, 'Favor informe seu nome'),
@@ -65,26 +67,28 @@ const Home = () => {
 
   return (
     <>
-      <Header />
-      <Slogan />
-      <CallToAction
-        text="ESTÁ BUSCANDO UM SERVIÇO DE QUALIDADE PARA REALIZAR SEUS SONHOS?"
-        buttonText="Entre em contato"
-        handleButtonClick={scrollToForm}
-      />
-      <About />
+      <StyleSheetManager shouldForwardProp={isPropValid}>
+        <Header />
+        <Slogan />
+        <CallToAction
+          text="ESTÁ BUSCANDO UM SERVIÇO DE QUALIDADE PARA REALIZAR SEUS SONHOS?"
+          buttonText="Entre em contato"
+          handleButtonClick={scrollToForm}
+        />
+        <About />
 
-      <ListingDescription />
-      <Carousel />
-      <CallToAction text="CANSADO DE CONSTRUTORA AMADORA?" buttonText="Entre em contato" hasButton={false} />
-      <form onSubmit={handleSubmit(handleRegister)}>
-        <FormProvider {...signUpForm}>
-          <SignUpForm errors={errors} success={success} />
-        </FormProvider>
-      </form>
-      <Footer />
+        <ListingDescription />
+        <Carousel />
+        <CallToAction text="CANSADO DE CONSTRUTORA AMADORA?" buttonText="Entre em contato" hasButton={false} />
+        <form onSubmit={handleSubmit(handleRegister)}>
+          <FormProvider {...signUpForm}>
+            <SignUpForm errors={errors} success={success} />
+          </FormProvider>
+        </form>
+        <Footer />
 
-      <Chat></Chat>
+        <Chat></Chat>
+      </StyleSheetManager>
     </>
   );
 };

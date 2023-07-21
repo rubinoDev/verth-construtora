@@ -12,7 +12,7 @@ export default createGlobalStyle`
     -webkit-tap-highlight-color: transparent;
 
     font-family: 'Dosis', 'Inter', Geneva, Verdana, sans-serif;
-}
+  }
 
 body {
     background:${Colors.white};

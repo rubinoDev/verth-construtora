@@ -28,7 +28,6 @@ const ListingDescription = () => {
 
     items &&
       items.forEach((item, index: number) => {
-        console.log(index);
         gsap.fromTo(
           item,
           {

@@ -14,11 +14,11 @@ export const Container = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.4rem;
 
     .logo {
       display: flex;
-      width: 20%;
+      width: 25%;
       img {
         width: 100%;
         object-fit: contain;
@@ -26,13 +26,14 @@ export const Container = styled.span`
     }
 
     .cnpj {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       color: ${Colors.white};
     }
 
     .icons {
       display: flex;
-      gap: 0.2rem;
+      gap: 0.8rem;
+      font-size: 1.5rem;
     }
 
     .copyright {

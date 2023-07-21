@@ -15,7 +15,7 @@ const Slogan = () => {
       },
       {
         opacity: 1,
-        duration: 1.5
+        duration: 2.5
       }
     ),
       [];
